@@ -41,7 +41,6 @@ class OBJECT_OT_save_lightfield(bpy.types.Operator):
     """Save config file with camera setup"""
     bl_idname = "scene.save_lightfield"
     bl_label = """Save light field parameters"""
-    bl_options = {'REGISTER'}
 
     def execute(self, context):
         LF = bpy.context.scene.LF
@@ -106,13 +105,10 @@ class OBJECT_OT_save_lightfield(bpy.types.Operator):
             offset = 0
         return offset
 
-
-
 class OBJECT_OT_load_lightfield(bpy.types.Operator):
     """Load config file with camera setup"""
     bl_idname = "scene.load_lightfield"
     bl_label = """Load and initialize light field parameters"""
-    bl_options = {'REGISTER'}
 
     def execute(self, context):
         LF = bpy.context.scene.LF
